@@ -51,7 +51,7 @@ public class Compte {
 
     }
     public void afficherSolde(){
-        System.out.println("le solde de votre compte est : " + getSolde());
+        System.out.println("le solde de votre compte est : " + this.solde);
     }
 
     public void virer(float valeur, int destinataire){
@@ -61,6 +61,9 @@ public class Compte {
         if (destinataire == getNumero()){
             System.out.println("Vous effectuez un virement sur le compte : " + getNumero());
             depot();
+
+        }else{
+            System.out.println("veuillez saisir un commpte existant, ou abandonnez le vivrement : ");
 
         }
 

@@ -6,8 +6,7 @@ public class Main {
        Compte client1 = new Compte();
        client1.setNumero(1);
        client1.setSolde(120);
-
-       client1.afficherSolde();
+       client1.virer(120,1);
         System.out.println(client1);
     }
 }

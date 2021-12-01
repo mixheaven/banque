@@ -4,7 +4,8 @@ import java.util.List;
 
 public class Client {
     private String nom;
-    private Compte compte = new Compte();
+    private Compte compte;
+    private Compte [] comptes;
 
     public Client( String nom) {
         this.nom = nom;
@@ -23,9 +24,12 @@ public class Client {
     public void getSlode(){
         float value = compte.getSolde();
     }
+
     public void afficherSolde(){
 
         System.out.println("le solde de votre compte est : " + compte.getSolde());
     }
+
+
 
 }
