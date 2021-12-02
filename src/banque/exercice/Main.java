@@ -1,12 +1,23 @@
 package banque.exercice;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
-       Compte client1 = new Compte();
-       client1.setNumero(1);
-       client1.setSolde(120);
-       client1.virer(120,1);
-        System.out.println(client1);
+
+
     }
+
+    public void ajouterClient(Client nom){
+        if( nom == null) {
+           Client client = new Client();
+        }
+        System.out.println("ce nom de client existe déja");
+    }
+    public void afficherBilan(){
+       
+
+    }
+
 }

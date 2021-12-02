@@ -6,7 +6,8 @@ import java.util.Scanner;
 
 public class Compte {
     private int numero;
-    private float solde;
+    private float solde = 120;
+
 
     Compte (){
 
@@ -30,24 +31,15 @@ public class Compte {
 
     //Methods
 
-    public void depot(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Veuillez entrez le montant de votre dépôt :");
-        float valeur = scanner.nextFloat();
-        solde = valeur + getSolde();
-
-        this.solde = solde;
-        scanner.close();
+    public void depot(float valeur){
+        this.solde = valeur + getSolde();
 
     }
-    public void retrait(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Veuillez entrez le montant de votre retrait :");
-        float valeur = scanner.nextFloat();
+    public void retrait(float valeur){
 
-        solde =  getSolde() - valeur ;
-        this.solde = solde;
-        scanner.close();
+
+        this.solde =  getSolde() - valeur;
+
 
     }
     public void afficherSolde(){
@@ -60,7 +52,7 @@ public class Compte {
         destinataire = scanner.nextInt();
         if (destinataire == getNumero()){
             System.out.println("Vous effectuez un virement sur le compte : " + getNumero());
-            depot();
+            depot(valeur);
 
         }else{
             System.out.println("veuillez saisir un commpte existant, ou abandonnez le vivrement : ");
